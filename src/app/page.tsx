@@ -1,63 +1,51 @@
-import Image from "next/image";
+import GuitarAnimation from '@/components/GuitarAnimation';
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+    <div className="min-h-screen bg-gradient-to-br from-[#F9F6F2] via-[#F5F1EB] to-[#F0EBE4] dark:from-[#2D241A] dark:via-[#3A2F24] dark:to-[#46392E]">
+      <main className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        {/* Hero Section - Centered and Professional */}
+        <div className="flex flex-col items-center justify-center min-h-[85vh] py-12 sm:py-16 lg:py-20">
+          <div className="flex flex-col items-center space-y-8 sm:space-y-10 lg:space-y-12 max-w-4xl mx-auto text-center">
+            
+            {/* Title Section */}
+            <div className="space-y-4 sm:space-y-6">
+              <div className="flex items-center justify-center gap-3 sm:gap-4 mb-2">
+                <span className="text-4xl sm:text-5xl lg:text-6xl text-[#B8966F] dark:text-[#D4B48A] animate-pulse drop-shadow-sm">♫</span>
+                <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold text-[#4A3E2E] dark:text-[#F5E6D3] tracking-tight leading-tight" style={{ fontFamily: 'var(--font-playfair), serif' }}>
+                  <span className="block italic">Chord</span>
+                  <span className="block italic bg-gradient-to-r from-[#6B5F4F] via-[#8B7A65] to-[#6B5F4F] dark:from-[#F5E6D3] dark:via-[#E8D8C0] dark:to-[#F5E6D3] bg-clip-text text-transparent">
+                    Stash
+                  </span>
+                </h1>
+                <span className="text-4xl sm:text-5xl lg:text-6xl text-[#B8966F] dark:text-[#D4B48A] animate-pulse drop-shadow-sm" style={{ animationDelay: '0.5s' }}>♪</span>
+              </div>
+              <p className="text-lg sm:text-xl lg:text-2xl text-[#6B5F4F] dark:text-[#D4C4B0] font-light max-w-2xl mx-auto leading-relaxed px-4 italic">
+                My personal digital songbook
+              </p>
+            </div>
+
+            {/* Animation Container */}
+            <div className="relative mb-4 sm:mb-6">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#D4A574]/18 to-[#C4935F]/12 dark:from-[#B8946A]/25 dark:to-[#A68258]/18 rounded-full blur-2xl -z-10 scale-110"></div>
+              <GuitarAnimation
+                width={280}
+                height={280}
+                className="drop-shadow-2xl transition-transform hover:scale-105 duration-300"
+              />
+            </div>
+
+            {/* Decorative Line with Strumming Pattern */}
+            <div className="flex items-center justify-center space-x-3 sm:space-x-4 w-full max-w-md mt-4">
+              <div className="flex-1 h-px bg-gradient-to-r from-transparent via-[#D4A574]/45 dark:via-[#B8946A] to-transparent"></div>
+              <span className="text-[#B8966F] dark:text-[#D4B48A] text-xl sm:text-2xl font-bold">↓</span>
+              <span className="text-[#B8966F] dark:text-[#D4B48A] text-xl sm:text-2xl font-bold opacity-90">↓</span>
+              <span className="text-[#B8966F] dark:text-[#D4B48A] text-xl sm:text-2xl font-bold">↑</span>
+              <span className="text-[#B8966F] dark:text-[#D4B48A] text-xl sm:text-2xl font-bold opacity-90">↓</span>
+              <span className="text-[#B8966F] dark:text-[#D4B48A] text-xl sm:text-2xl font-bold">↑</span>
+              <div className="flex-1 h-px bg-gradient-to-l from-transparent via-[#D4A574]/45 dark:via-[#B8946A] to-transparent"></div>
+            </div>
+          </div>
         </div>
       </main>
     </div>
