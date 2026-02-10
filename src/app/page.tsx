@@ -7,8 +7,6 @@ export default function Home() {
       <main className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="flex flex-col items-center justify-center min-h-[85vh] py-12 sm:py-16 lg:py-20">
           <div className="flex flex-col items-center space-y-8 sm:space-y-10 lg:space-y-12 max-w-4xl mx-auto text-center">
-            
-            {/* Title Section */}
             <div className="space-y-4 sm:space-y-6">
               <div className="flex items-center justify-center gap-3 sm:gap-4 mb-2">
                 <span className="text-4xl sm:text-5xl lg:text-6xl text-[#B8966F] dark:text-[#D4B48A] animate-pulse drop-shadow-sm">♫</span>
@@ -25,7 +23,6 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Animation Container */}
             <div className="relative mb-4 sm:mb-6">
               <div className="absolute inset-0 bg-gradient-to-br from-[#D4A574]/18 to-[#C4935F]/12 dark:from-[#B8946A]/25 dark:to-[#A68258]/18 rounded-full blur-2xl -z-10 scale-110"></div>
               <GuitarAnimation
@@ -48,7 +45,6 @@ export default function Home() {
               </Link>
             </div>
 
-            {/* Decorative Line with Strumming Pattern */}
             <div className="flex items-center justify-center space-x-3 sm:space-x-4 w-full max-w-md mt-4">
               <div className="flex-1 h-px bg-gradient-to-r from-transparent via-[#D4A574]/45 dark:via-[#B8946A] to-transparent"></div>
               <span className="text-[#B8966F] dark:text-[#D4B48A] text-xl sm:text-2xl font-bold">↓</span>
